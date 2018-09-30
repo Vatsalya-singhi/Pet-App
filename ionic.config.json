@@ -1,0 +1,7 @@
+{
+  "name": "petapp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

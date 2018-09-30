@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>
+      Help A Pet
+  </ion-title>
+
+  <ion-buttons end>
+    <button ion-button large round (click)='openFilters();'>
+        <ion-icon name="funnel" md="md-funnel">  Filter</ion-icon>
+    </button>
+  </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+      <ion-card *ngFor="let item of petListRef$|async" (click)="details(item)">
+          <img src=""/>    <!-- Add img src -->
+          <ion-card-content>
+            <ion-card-title>
+                Pet Name : {{item.petname}}
+              </ion-card-title>
+            <p>
+              Pet ID : {{item.petid}} <br>
+              The most popular industrial group ever, and largely
+              responsible for bringing the music to a mass audience.
+            </p>
+          </ion-card-content>
+        </ion-card>
+    
+  </ion-list>
+</ion-content>
